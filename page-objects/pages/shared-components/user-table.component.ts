@@ -22,6 +22,8 @@ export class UserTableComponent extends PageObjectComponent {
         .nth(1)
         .locator("li")
         .nth(1),
+    vacancyName: (vacancyName: string) =>
+      this.parentElement.locator("tr").locator(`td:has-text("${vacancyName}")`),
   };
 
   constructor(page: Page) {
