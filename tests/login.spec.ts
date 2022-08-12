@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { USER } from "../data/user.data";
+import { LOGIN_USER } from "../data/user.data";
 import { DashboardPage } from "../page-objects/pages/dashboard.page";
 import { LoginPage } from "../page-objects/pages/login.page";
 
@@ -15,7 +15,7 @@ test.describe("Login", () => {
   });
 
   test("should login correctly to the account", async () => {
-    await loginPage.loginToAccount(USER.name, USER.password);
+    await loginPage.loginToAccount(LOGIN_USER.name, LOGIN_USER.password);
 
     await dashboardPage.waitForPageLoad();
     await expect(dashboardPage.$.quickLaunchPanel).toBeVisible();

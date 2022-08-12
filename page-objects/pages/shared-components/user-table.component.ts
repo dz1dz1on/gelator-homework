@@ -5,8 +5,15 @@ export class UserTableComponent extends PageObjectComponent {
   $ = {
     addUserButton: this.page.locator("#btnAdd"),
     deleteUserButton: this.page.locator("#btnDelete"),
+    rowCheckbox: (checkboxIndex: number) =>
+      this.parentElement.locator('[type="checkbox"]').nth(checkboxIndex),
+    userRows: this.parentElement.locator("tr"),
     userName: (index: number) =>
-      this.parentElement.locator("tr").nth(index).locator("td").nth(2),
+      this.parentElement
+        .locator("tr")
+        .nth(index + 1)
+        .locator("td")
+        .nth(1),
   };
 
   constructor(page: Page) {
