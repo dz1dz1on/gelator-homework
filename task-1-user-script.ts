@@ -2,9 +2,9 @@ import { faker } from "@faker-js/faker";
 
 type USERS = (string | number)[][];
 
-export const USERS: USERS = [];
+const USERS: USERS = [];
 
-export function createRandomUser(): (string | number)[] {
+function createRandomUser(): (string | number)[] {
   return [
     faker.internet.email(),
     faker.name.firstName(),
@@ -20,7 +20,3 @@ function createRandomUsers(numberOfUsers: number) {
     return USERS.push(createRandomUser());
   });
 }
-
-createRandomUsers(3);
-
-console.log(USERS);
