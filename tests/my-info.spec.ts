@@ -36,10 +36,13 @@ test.describe("My info", () => {
     const savedPersonalDayOfBirth =
       await myInfoPage.$.personalDetails.$.personalDayOfBirthInput.inputValue();
 
-    await expect(savedPersonalDayOfBirth).not.toEqual(futureDate);
+    await expect(savedPersonalDayOfBirth, {
+      message:
+        "This test will fail intentionally. Birth date shouldn't be from the futre",
+    }).not.toEqual(futureDate);
   });
 
-  test("should be able to upload an image", async ({ page }) => {
+  test("should be able to upload an image", async () => {
     await myInfoPage.$.attachmets.uploadFile(TestFiles.jpgArtwork.path);
 
     await expect(
