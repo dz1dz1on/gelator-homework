@@ -8,6 +8,9 @@ export type StatusState = "Enabled" | "Disabled";
 export interface UserParams {
   userRole?: UserRole;
   userName?: string;
+  firstName?: string;
+  middleName?: string;
+  lastName?: string;
   password?: string;
   status?: StatusState;
 }
@@ -15,6 +18,9 @@ export interface UserParams {
 interface BaseUser {
   userRole: UserRole;
   userName: string;
+  firstName?: string;
+  middleName?: string;
+  lastName?: string;
   password: string;
   status: StatusState;
 }
@@ -24,6 +30,9 @@ export class User implements BaseUser {
   userName: string = `${faker.internet.userName()}${Math.floor(
     Math.random() * 1000
   )}`;
+  firstName: string = "";
+  middleName: string = "";
+  lastName: string = "";
   status: StatusState = "Enabled";
   password: string = "useRpassword123!321";
 
@@ -39,6 +48,14 @@ export class User implements BaseUser {
 
   static DisabledUser(): User {
     return new User({ status: "Disabled" });
+  }
+
+  static personalDetailsUser(): User {
+    return new User({
+      firstName: faker.name.firstName(),
+      lastName: faker.name.lastName(),
+      middleName: faker.name.middleName(),
+    });
   }
 
   static DefaultUser(): User {

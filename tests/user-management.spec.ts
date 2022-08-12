@@ -11,8 +11,8 @@ test.describe("Admin", () => {
 
   test.beforeEach(async ({ page }) => {
     user = User.DefaultUser();
-    loginPage = await new LoginPage(page);
-    systemUserPage = await new SystemUserPage(page);
+    loginPage = new LoginPage(page);
+    systemUserPage = new SystemUserPage(page);
 
     await loginPage.load();
     await loginPage.loginToAccount(LOGIN_USER.name, LOGIN_USER.password);
