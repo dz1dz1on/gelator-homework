@@ -14,6 +14,14 @@ export class UserTableComponent extends PageObjectComponent {
         .nth(index + 1)
         .locator("td")
         .nth(1),
+    jobTitle: (index: number) =>
+      this.parentElement
+        .locator("tr")
+        .nth(index + 1)
+        .locator("td")
+        .nth(1)
+        .locator("li")
+        .nth(1),
   };
 
   constructor(page: Page) {
@@ -22,5 +30,9 @@ export class UserTableComponent extends PageObjectComponent {
 
   async getUserName(userIndex: number): Promise<string> {
     return await this.$.userName(userIndex).innerText();
+  }
+
+  async getNumberOfUsers(): Promise<number> {
+    return await this.$.userRows.count();
   }
 }

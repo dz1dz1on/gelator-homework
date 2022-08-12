@@ -8,8 +8,8 @@ test.describe("Login", () => {
   let dashboardPage: DashboardPage;
 
   test.beforeEach(async ({ page }) => {
-    loginPage = await new LoginPage(page);
-    dashboardPage = await new DashboardPage(page);
+    loginPage = new LoginPage(page);
+    dashboardPage = new DashboardPage(page);
 
     await loginPage.load();
   });
