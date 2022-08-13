@@ -40,7 +40,7 @@ const config: PlaywrightTestConfig = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
-    headless: true,
+    headless: !!process.env.CI,
     viewport: { width: 1280, height: 720 },
   },
 
