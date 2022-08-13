@@ -11,4 +11,4 @@ RUN npm ci
 #In the CI copy tests on builded docker with playwright
 COPY . .
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
