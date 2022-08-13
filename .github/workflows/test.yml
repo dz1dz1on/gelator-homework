@@ -15,4 +15,4 @@ jobs:
         run: docker build . -t test-image
       # run application Docker image
       - name: Start container
-        run: docker run -t test-image:latest
+        run: docker run test-image:latest -it
