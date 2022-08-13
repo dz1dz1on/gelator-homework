@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npx run test --CI=TRUE
+npm run test --CI=TRUE
