@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # checkout application code
-       steps:
       - name: Checkout project
       - uses: actions/checkout@v2
       # build application Docker image
@@ -17,4 +16,4 @@ jobs:
         run: docker build . -t test-image
       # run application Docker image
       - name: Start container (application)
-        run: docker run test-image --rm 
+        run: docker run test-image --rm
