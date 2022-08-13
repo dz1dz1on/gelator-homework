@@ -11,4 +11,6 @@ RUN npm ci
 #In the CI copy tests on builded docker with playwright
 COPY . .
 
+RUN chmod 755 entrypoint.sh
+
 ENTRYPOINT ["./entrypoint.sh"]
