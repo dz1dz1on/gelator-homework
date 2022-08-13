@@ -16,6 +16,8 @@ jobs:
       # run application Docker image
       - name: Start container with tests
         run: docker run test-image:latest -it --mount type=bind,source=$PWD/test-results,target=/app/test-results
+      - name: check path
+        run: echo "$(pwd)"
       - uses: actions/upload-artifact@v2
         if: always()
         with:
