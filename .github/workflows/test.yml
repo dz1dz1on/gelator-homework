@@ -11,13 +11,10 @@ jobs:
       # checkout application code
        steps:
       - name: Checkout project
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       # build application Docker image
       - name: Build image
-        run: docker build . -t test-image:latest
+        run: docker build . -t test-image
       # run application Docker image
       - name: Start container (application)
-        run: docker run --rm -d --name test-image -p 8080:8080 -e ADYEN_API_KEY="${{ secrets.ADYEN_API_KEY }}" -test-image:latest
-      - name: Run Testing Suite container
-        # run testing suite Docker image
-        run: docker run --rm --name adyen-testing-suite --network host ghcr.io/adyen-examples/adyen-testing-suite:latest
+        run: docker run test-image --rm 
