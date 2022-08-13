@@ -15,7 +15,7 @@ jobs:
         run: docker build . -t test-image
       # run application Docker image
       - name: Start container with tests
-        run: docker run test-image:latest -it --mount type=bind,source="$(pwd)"/test-results,target=/app/test-results
+        run: docker run test-image:latest -it --mount type=bind,source=/test-results,target=/app/test-results
       - uses: actions/upload-artifact@v2
         if: always()
         with:
