@@ -14,5 +14,5 @@ jobs:
       - name: Build image
         run: docker build . -t test-image
       # run application Docker image
-      - name: Start container (application)
-        run: docker run test-image --rm
+      - name: Start container
+        run: docker run test-image:latest
