@@ -1,5 +1,5 @@
 name: Docker tests
-# Should be done with sending image to the docker registry and uploading artifacts to the S3 instead of using bind-mounts.
+# Should be done with sending image to the docker registry and uploading artifacts to the S3 instead of using bind-mounts and add links to the logs.
 # Well somehow bind-mounts didn't work as expected. Needs investigation.
 on:
   push:
