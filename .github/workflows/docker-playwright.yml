@@ -1,5 +1,5 @@
-name: Tests
-
+name: Docker tests
+#Should be done with sending image to the docker registry and uploading artifacts to the S3 instead of using bind-mounts
 on:
   push:
     branches: [main]
