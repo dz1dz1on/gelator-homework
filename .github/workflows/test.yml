@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # checkout application code
-      - name: Checkout project
       - uses: actions/checkout@v2
       # build application Docker image
       - name: Build image
