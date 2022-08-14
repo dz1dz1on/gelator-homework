@@ -17,6 +17,7 @@ Due to only one avalaiable user tests are running one after another - parallel t
 # API tests
 
 - Requests are sent via Axios and as a test runner is used Playwright thats why we can use them in the same catalogu with the E2E tests and the setup functions are the same.
+- [site](https://clockify.me/developers-api) used for API integration tests
 
 # E2E tests
 
