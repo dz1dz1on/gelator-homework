@@ -21,7 +21,7 @@ Below tests should be done automatically by writing a code:
 
 ### TESTERS
 
-Manual tests main focus will be validation of the returned data from application.
+Manual tests should focus on validation of the returned data from application.
 Disclaimer: The scenarios listed in the following document should be tested.
 
 #### ⚠️What should be tested?⚠️:
