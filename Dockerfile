@@ -1,5 +1,4 @@
 FROM mcr.microsoft.com/playwright:v1.25.0-focal
-ARG API_KEY
 
 USER root 
 
@@ -13,9 +12,5 @@ RUN npm ci
 COPY . .
 
 RUN chmod 755 entrypoint.sh
-RUN chmod 755 docker-env-script.sh
-
-RUN ./docker-env-script.sh
-
 
 ENTRYPOINT ["./entrypoint.sh"]

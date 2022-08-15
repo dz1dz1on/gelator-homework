@@ -54,7 +54,7 @@ export const callApi = async <T>({
   const apiCallConfig = {
     headers: {
       "Content-Type": "application/json",
-      "X-Api-Key": process.env.API_KEY,
+      "X-Api-Key": "MTBhOTgwNmItOWIxOC00NTEwLWIyYzMtMDhlYzQ2NjZkNjA4",
     },
   };
 

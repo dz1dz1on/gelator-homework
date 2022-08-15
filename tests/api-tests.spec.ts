@@ -5,7 +5,7 @@ import { ApiClient } from "../api/api-client";
   These tests are just showing the pattern. 
   They can be much more complex and set up things like a user by using only API. 
 */
-test.describe("API tests", () => {
+test.describe.only("API tests", () => {
   let workspaceId;
   let userName;
   let clientId;
