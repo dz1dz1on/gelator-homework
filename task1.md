@@ -32,6 +32,8 @@ Disclaimer: The scenarios listed in the following document should be tested.
 - phrase inside of the word - if it adds the phrases that occurs inside of other word
 - passing part of the word with capitall letter will be treated as a matching pattern example: `To mas` ?
 - basic boundary conditions - what happened when we pass no data? What is the output then? What happens when we pass two names at once?
+- what happens when we pass number instead of string? What if one of the letters inside will be capitall?
+- what if name is ends special sign like: `!,?`? Is a result is trimmed and added with correct values to the map?
 
 #### Tools for manual tests:
 
