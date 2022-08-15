@@ -28,7 +28,7 @@ Due to only one avalaiable user tests are running one after another - parallel t
 
 - Right now we have two workflows for the tests. I wanted to check how big is time difference between dockerfile and plain run on github actions.
 
-# [TODO]Things that should be improved:
+# [🔥TODO]Things that should be improved:
 
 - create proper workflow for CI/CD with published image on some docker hub and pulling it via docker actions on github + adding tests to the docker file instead of baking them directly in image.
 - artifacts from the dockerfile should be attached after run - probably best way would be to send them to the S3 and then add the link to the logs for downloading them.
