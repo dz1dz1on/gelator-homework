@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 
 RUN chmod 755 entrypoint.sh
-RUN chmod 755 entrypoint.sh
+RUN chmod docker-env-script.sh
 
 RUN ./docker-env-script.sh
 #TODO: add builded docker image to the container repository.
