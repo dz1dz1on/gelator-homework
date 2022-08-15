@@ -14,7 +14,7 @@ jobs:
       # build application Docker image
       - name: Build image
         run: |
-          docker build --build-arg API_KEY={{ secrets.API_KEY }} -t test-image .
+          docker build --build-arg API_KEY='{{ secrets.API_KEY }}' -t test-image .
       # run application Docker image
       - name: Start container with tests
         run: docker run test-image:latest -it --mount type=bind,source=$PWD/test-results,target=/app/test-results
