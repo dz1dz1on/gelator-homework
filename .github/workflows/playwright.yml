@@ -14,7 +14,7 @@ jobs:
       - name: "Create env file"
         run: |
           touch .env
-          echo PASSWORD=${{ secrets.API_KEY }} > .env
+          echo API_KEY=${{ secrets.API_KEY }} > .env
           cat .env
       - name: Install dependencies
         run: npm ci

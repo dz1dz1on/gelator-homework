@@ -1,4 +1,5 @@
 FROM mcr.microsoft.com/playwright:v1.25.0-focal
+ARG API_KEY
 
 USER root 
 

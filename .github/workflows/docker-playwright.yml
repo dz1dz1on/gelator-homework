@@ -12,15 +12,11 @@ jobs:
       # checkout application code
       - uses: actions/checkout@v2
       # build application Docker image
-      - name: "Create env file"
-        run: |
-          touch .env
-          echo PASSWORD=${{ secrets.API_KEY }} > .env
-          cat .env
-      - name: check
-        run: echo ls
       - name: Build image
-        run: docker build . -t test-image
+        run: |
+        docker \
+        --build-arg API_KEY={{ secrets.API_KEY }}
+        build . -t test-image
       # run application Docker image
       - name: Start container with tests
         run: docker run test-image:latest -it --mount type=bind,source=$PWD/test-results,target=/app/test-results
