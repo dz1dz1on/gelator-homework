@@ -8,14 +8,14 @@ WORKDIR /app
 COPY package.json package-lock.json ./ 
 
 RUN npm ci
-
+#TODO: add builded docker image to the container repository.
+#In the CI copy tests on builded docker with playwright
 COPY . .
 
 RUN chmod 755 entrypoint.sh
-RUN chmod docker-env-script.sh
+RUN chmod 755 docker-env-script.sh
 
 RUN ./docker-env-script.sh
-#TODO: add builded docker image to the container repository.
-#In the CI copy tests on builded docker with playwright
+
 
 ENTRYPOINT ["./entrypoint.sh"]
