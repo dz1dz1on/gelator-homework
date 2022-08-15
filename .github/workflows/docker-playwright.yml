@@ -13,8 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       # build application Docker image
       - name: Build image
-        run: |
-        docker --build-arg API_KEY={{ secrets.API_KEY }} build . -t test-image
+        run: docker build . -t test-image --build-arg API_KEY={{ secrets.API_KEY }}
       # run application Docker image
       - name: Start container with tests
         run: docker run test-image:latest -it --mount type=bind,source=$PWD/test-results,target=/app/test-results
