@@ -37,7 +37,7 @@ Disclaimer: The scenarios listed in the following document should be tested.
 
 #### Tools for manual tests:
 
-- Saving file as txt -> Visual Studio Code (we have lines with numbers) + finder with case sensitivity switch
+- Saving file as txt -> open in Visual Studio Code (we have lines with numbers) + finder with case sensitivity switch
 
 #### Possible automatization optimizations:
 
