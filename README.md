@@ -10,7 +10,7 @@ Due to only one avalaiable user tests are running one after another - parallel t
 
 # Descriptive task
 
-- task number 1 is desribed in `task1.md` file.
+- Task number 1 is desribed in `task1.md` file.
 - `task-user-1-script.ts` is a script for for the generating users for the descriptive task.
 - To run this script type: `ts-node task-user-1-script.ts` in the console in the project.
 
