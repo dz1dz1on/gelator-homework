@@ -1,7 +1,7 @@
 # Task 1
 
-This is not a proper Test Plan. It is more like my apprach to the problem.
-Described below cases in **What should be tested** section are needed to be tested and covered.
+This is not a proper Test Plan. It is more like my apprach to the problem.<br/>
+Described below cases in **What should be tested** section should to be tested and covered by developers too.
 
 ### DEVELOPERS
 
