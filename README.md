@@ -20,9 +20,9 @@ Due to only one avalaiable user tests are running one after another - parallel t
 
 # E2E tests
 
-1. E2E tests are working on open for testing [site](https://opensource-demo.orangehrmlive.com/) and it may happen a situation where logging can be blocked because someone did too many requests.
+1. E2E tests are working on open for testing [site](https://opensource-demo.orangehrmlive.com/) and may happen a situation where logging can be blocked because someone did too many requests.
    Situation happened once and I did mentioned it on their [github](https://github.com/orangehrm/orangehrm/issues/441).
-2. One of the tests E2E tests is failing **intentionally** - future date of the birth can be passed to the user profile and saved.<br/> This is allowed on this site somehow.
+2. One of the tests E2E tests is failing **intentionally** - future date of the birth can be passed to the user profile and saved.<br/> This is allowed on this site somehow. Also we can see that an artifact is added after failed tests in 1/2 of workflows (more info about artifcats in todo section).
 
 # CI/CD
 
