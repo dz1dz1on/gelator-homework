@@ -12,6 +12,11 @@ jobs:
       # checkout application code
       - uses: actions/checkout@v2
       # build application Docker image
+      - name: "Create env file"
+        run: |
+          touch .env
+          echo PASSWORD=${{ secrets.API_KEY }} > .env
+          cat .env
       - name: Build image
         run: docker build . -t test-image
       # run application Docker image
